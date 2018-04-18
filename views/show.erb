@@ -2,3 +2,7 @@
 <p>Last Name: <%= @student.last_name%> </p>
 <p>House: <%= @student.house%> </p>
 <p>Age: <%= @student.age%></p>
+
+<form action="/hogwarts/<%= @student.id%>/edit" method = "get">
+<input type="submit" value="Edit Student">
+</form>
