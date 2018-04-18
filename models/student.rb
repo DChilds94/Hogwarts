@@ -1,5 +1,3 @@
-
-require("pry-byebug")
 require_relative("../db/sql_runner.rb")
 
 class Student
@@ -46,5 +44,3 @@ class Student
 
 
 end #end of class
-binding.pry
-nil

@@ -29,4 +29,10 @@ class TestStudent < MiniTest::Test
   def test_get_age()
     assert_equal(11, @student1.age)
   end
+
+
+
+
+
+
 end #end of class
