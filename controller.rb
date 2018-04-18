@@ -35,5 +35,10 @@ get "/hogwarts/:id/edit" do
 end
 
 #update
+post "/hogwarts/:id/edit" do
+  student = Student.new(params)
+  student.update
+  redirect to "/hogwarts"
+end
 
 #destory

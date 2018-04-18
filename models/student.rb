@@ -9,7 +9,7 @@ class Student
     @id = options["id"].to_i
     @first_name = options['first_name']
     @last_name = options['last_name']
-    @house = options['house']
+    @house = options['house'].to_i
     @age = options['age'].to_i
   end
 
@@ -39,8 +39,16 @@ class Student
     result = Student.new(student.first)
     return result
   end
+  def update()
+    sql = "UPDATE students SET (first_name, last_name, house, age) = ($1, $2, $3, $4) WHERE id = $5"
+    values = [@first_name, @last_name, @house, @age, @id]
+    SqlRunner.run(sql, values)
+  end
 
-
+  def self.delete_all
+    sql = "SELECT * FROM students"
+    SqlRunner.run(sql)
+  end
 
 
 
