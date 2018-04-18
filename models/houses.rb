@@ -17,8 +17,8 @@ class House
 
 
   def save()
-    sql = "INSERT INTO houses (name) VALUES ($1) RETURNING id = $2"
-    values = [@name, @id]
+    sql = "INSERT INTO houses (name) VALUES ($1) RETURNING id"
+    values = [@name]
     houses = SqlRunner.run(sql, values)
     @id = houses.first["id"].to_i
   end
