@@ -11,6 +11,9 @@ get "/hogwarts" do
 end
 
 #new
+get "/hogwarts/new" do 
+  erb(:new)
+end
 
 #show
 
